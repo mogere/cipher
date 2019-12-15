@@ -8,4 +8,29 @@ public class CipherTest {
         Cipher testCipher =new Cipher("word", 5);
         assertEquals(true, testCipher instanceof Cipher);
     }
+
+    @Test
+    public void  testCipher_testWordGetter_word() {
+        Cipher testCipher =new Cipher("word", 5);
+        assertEquals("word", testCipher.getInitialText());
+    }
+
+    @Test
+    public void  testCipher_testKeyGetter_word() {
+        Cipher testCipher =new Cipher("word", 5);
+        assertEquals(5, testCipher.getKey());
+    }
+    @Test
+    public void testCipher_setInitialText(){
+        Cipher testCipher =new Cipher();
+        testCipher.setInitialText("Welcome");
+        assertEquals( "Welcome", testCipher.getInitialText());
+    }
+
+    @Test
+    public void testCipher_setKey(){
+        Cipher testCipher =new Cipher();
+        testCipher.setKey(7);
+        assertEquals( 7, testCipher.getKey());
+    }
 }
