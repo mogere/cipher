@@ -26,4 +26,10 @@ public class Cipher {
     public void setKey(int key){
         this.key = key;
     }
+
+    public String encrypt(String text){
+        String encrypted = "";
+
+        return encrypted;
+    }
 }

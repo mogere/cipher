@@ -33,4 +33,10 @@ public class CipherTest {
         testCipher.setKey(7);
         assertEquals( 7, testCipher.getKey());
     }
+
+    @Test
+    public void testCipher_encrypt(){
+        Cipher testCipher =new Cipher();
+
+    }
 }
