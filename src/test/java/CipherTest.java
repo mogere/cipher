@@ -36,7 +36,7 @@ public class CipherTest {
 
     @Test
     public void testCipher_encrypt(){
-        Cipher testCipher =new Cipher();
-
+        Cipher testCipher =new Cipher("ab", 1);
+        assertEquals("bc", testCipher.encrypt());
     }
 }
