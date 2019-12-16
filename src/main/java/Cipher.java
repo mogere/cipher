@@ -33,10 +33,10 @@ public class Cipher {
             char check = initialText.charAt(i);
             if (Character.isLetter(check)) {
                 if (Character.isLowerCase(check)) {
-                    char checked = (char) (check + key);
+                    char checked = encryption(check);
                     encrypted += checked;
                 } else if (Character.isUpperCase(check)) {
-                    char checked = (char) (check + key);
+                    char checked = encryption(check);;
                     encrypted += checked;
                 }
             }
@@ -44,6 +44,12 @@ public class Cipher {
 
         return encrypted;
     }
+
+    public char encryption(char check){
+        char checked = (char)(check + key);
+        return checked;
+    }
+
     public String decrypt(){
         return null;
     }

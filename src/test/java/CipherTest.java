@@ -39,4 +39,10 @@ public class CipherTest {
         Cipher testCipher =new Cipher("ab", 1);
         assertEquals("bc", testCipher.encrypt());
     }
+
+    @Test
+    public void testCipher_decrypt(){
+        Cipher testCipher =new Cipher("bc", 1);
+        assertEquals("ab", testCipher.decrypt());
+    }
 }
