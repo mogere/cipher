@@ -27,7 +27,7 @@ public class Cipher {
         this.key = key;
     }
 
-    public String encrypt(String text){
+    public String encrypt(){
         String encrypted = "";
         for(int i=0, length = initialText.length();i<length;i++ ){
             char check = initialText.charAt(i);
@@ -44,5 +44,8 @@ public class Cipher {
         }
 
         return encrypted;
+    }
+    public String decrypt(){
+        return null;
     }
 }
