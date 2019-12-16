@@ -29,6 +29,19 @@ public class Cipher {
 
     public String encrypt(String text){
         String encrypted = "";
+        for(int i=0, length = initialText.length();i<length;i++ ){
+            char check = initialText.charAt(i);
+            if(Character.isLetter(check)){
+                if(Character.isLowerCase(check)){
+                    char checked = (char)(check+key);
+                    if(check>'z'){
+                        encrypted += (char)(check - (26 - key));
+                    }
+                    else
+                        encrypted += checked;
+                }
+            }
+        }
 
         return encrypted;
     }
