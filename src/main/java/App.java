@@ -4,6 +4,6 @@ public class App {
     cipher.setInitialText("This word");
     cipher.setKey(4);
     System.out.println(cipher.encrypt());
-
+    System.out.println(cipher.decrypt());
     }
 }

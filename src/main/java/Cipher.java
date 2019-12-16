@@ -51,6 +51,24 @@ public class Cipher {
     }
 
     public String decrypt(){
-        return null;
+        String decrypted = "";
+        for(int i=0, length = initialText.length();i<length;i++ ) {
+            char check = initialText.charAt(i);
+            if (Character.isLetter(check)) {
+                if (Character.isLowerCase(check)) {
+                    char checked = decryption(check);
+                    decrypted += checked;
+                } else if (Character.isUpperCase(check)) {
+                    char checked = decryption(check);;
+                    decrypted += checked;
+                }
+            }
+        }
+
+        return decrypted;
+    }
+    public char decryption(char check){
+        char checked = (char)(check - key);
+        return checked;
     }
 }
