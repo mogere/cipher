@@ -43,6 +43,6 @@ public class CipherTest {
     @Test
     public void testCipher_decrypt(){
         Cipher testCipher =new Cipher("bc", 1);
-        assertEquals("kb", testCipher.decrypt());
+        assertEquals("cd", testCipher.decrypt());
     }
 }
